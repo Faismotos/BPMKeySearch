@@ -1,0 +1,316 @@
+{
+  "coldplay viva la vida": {
+    "title": "Viva La Vida",
+    "artist": "Coldplay",
+    "album": "Viva La Vida or Death and All His Friends",
+    "cover": "https://cdn-images.dzcdn.net/images/cover/eede3cd0dc3a5a87c7a5b1085b022e2d/500x500-000000-80-0-0.jpg",
+    "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/e/2/5/0/e25fade11767fd539ad651da72103237.mp3?hdnea=exp=1794029174~acl=/api/1/1/e/2/5/0/e25fade11767fd539ad651da72103237.mp3*~data=user_id=0,application_id=42~hmac=93c563d23c9216b749371ccb095acde93db2857a44cf3696ec08777485d6d2c5",
+    "key_pt": "Fá Menor",
+    "key_en": "F Minor",
+    "camelot": "4A",
+    "harmonic_matches": [
+      {
+        "code": "4A",
+        "type": "Tom Idêntico"
+      },
+      {
+        "code": "4B",
+        "type": "Relativo Maior/Menor"
+      },
+      {
+        "code": "5A",
+        "type": "Subir Energia (+1)"
+      },
+      {
+        "code": "3A",
+        "type": "Descer Energia (-1)"
+      }
+    ],
+    "scale": {
+      "pt": "Fá - Sol - Sol# - Lá# - Dó - Dó# - Ré#",
+      "en": "F - G - G# - A# - C - C# - D#",
+      "notes_list": [
+        "F",
+        "G",
+        "G#",
+        "A#",
+        "C",
+        "C#",
+        "D#"
+      ]
+    },
+    "bpm": 138,
+    "bpm_exact": 137.8,
+    "tempo_name": "Allegro (Rápido e Animado)",
+    "ms_per_beat": 435,
+    "time_signature": "4/4",
+    "duration_sec": 242,
+    "duration_formatted": "04:02",
+    "service": "Deezer"
+  },
+  "daft punk get lucky": {
+    "title": "Get Lucky (Radio Edit - feat. Pharrell Williams and Nile Rodgers)",
+    "artist": "Daft Punk",
+    "album": "Get Lucky (Radio Edit - feat. Pharrell Williams and Nile Rodgers)",
+    "cover": "https://cdn-images.dzcdn.net/images/cover/bc49adb87758e0c8c4e508a9c5cce85d/500x500-000000-80-0-0.jpg",
+    "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/1/b/f/0/1bf80a82992903ff685ba1b7275223f8.mp3?hdnea=exp=1794029399~acl=/api/1/1/1/b/f/0/1bf80a82992903ff685ba1b7275223f8.mp3*~data=user_id=0,application_id=42~hmac=653c5ec8cc3557f6607e4d62f44b12deac2554492eb282d6a89cc8d68c76904d",
+    "key_pt": "Dó Maior",
+    "key_en": "C Major",
+    "camelot": "8B",
+    "harmonic_matches": [
+      {
+        "code": "8B",
+        "type": "Tom Idêntico"
+      },
+      {
+        "code": "8A",
+        "type": "Relativo Maior/Menor"
+      },
+      {
+        "code": "9B",
+        "type": "Subir Energia (+1)"
+      },
+      {
+        "code": "7B",
+        "type": "Descer Energia (-1)"
+      }
+    ],
+    "scale": {
+      "pt": "Dó - Ré - Mi - Fá - Sol - Lá - Si",
+      "en": "C - D - E - F - G - A - B",
+      "notes_list": [
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "A",
+        "B"
+      ]
+    },
+    "bpm": 116,
+    "bpm_exact": 116.1,
+    "tempo_name": "Moderato (Moderado)",
+    "ms_per_beat": 517,
+    "time_signature": "4/4",
+    "duration_sec": 248,
+    "duration_formatted": "04:08",
+    "service": "Deezer"
+  },
+  "billie eilish bad guy": {
+    "title": "bad guy",
+    "artist": "Billie Eilish",
+    "album": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
+    "cover": "https://cdn-images.dzcdn.net/images/cover/6630083f454d48eadb6a9b53f035d734/500x500-000000-80-0-0.jpg",
+    "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/b/5/2/0/b528e07441caa4883c8d1c4b746bf47c.mp3",
+    "key_pt": "Sol Menor",
+    "key_en": "G Minor",
+    "camelot": "6A",
+    "harmonic_matches": [
+      {
+        "code": "6A",
+        "type": "Tom Idêntico"
+      },
+      {
+        "code": "6B",
+        "type": "Relativo Maior/Menor"
+      },
+      {
+        "code": "7A",
+        "type": "Subir Energia (+1)"
+      },
+      {
+        "code": "5A",
+        "type": "Descer Energia (-1)"
+      }
+    ],
+    "scale": {
+      "pt": "Sol - Lá - Lá# - Dó - Ré - Ré# - Fá",
+      "en": "G - A - A# - C - D - D# - F",
+      "notes_list": [
+        "G",
+        "A",
+        "A#",
+        "C",
+        "D",
+        "D#",
+        "F"
+      ]
+    },
+    "bpm": 135,
+    "bpm_exact": 135.1,
+    "tempo_name": "Allegro (Rápido e Animado)",
+    "ms_per_beat": 444,
+    "time_signature": "4/4",
+    "duration_sec": 194,
+    "duration_formatted": "03:14",
+    "service": "Deezer"
+  },
+  "720) youtube brave": {
+    "title": "Brave",
+    "artist": "720) YouTube",
+    "album": "",
+    "cover": "",
+    "preview_url": null,
+    "key_pt": "Não detectado",
+    "key_en": "Unknown",
+    "camelot": "-",
+    "harmonic_matches": [],
+    "scale": null,
+    "bpm": 120,
+    "bpm_exact": 120,
+    "tempo_name": "Allegro (Rápido e Animado)",
+    "ms_per_beat": 500,
+    "time_signature": "4/4",
+    "duration_sec": 0,
+    "duration_formatted": "--:--",
+    "service": "Local"
+  },
+  "max styler one more - solomun remix": {
+    "title": "One More (feat. Ad-Apt) (Solomun Remix)",
+    "artist": "Max Styler",
+    "album": "One More (feat. Ad-Apt) (Solomun Remix)",
+    "cover": "https://cdn-images.dzcdn.net/images/cover/17b36b83d23d917ddbcab3c278193bdd/500x500-000000-80-0-0.jpg",
+    "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/c/d/c/0/cdc789c7c359ae39c8af686969457a35.mp3?hdnea=exp=1794029600~acl=/api/1/1/c/d/c/0/cdc789c7c359ae39c8af686969457a35.mp3*~data=user_id=0,application_id=42~hmac=45180efeed777b822d8543060c215dcdcb55a4c5a97dea9ed6c4382dcdd6b7b5",
+    "key_pt": "Dó Maior",
+    "key_en": "C Major",
+    "camelot": "8B",
+    "harmonic_matches": [
+      {
+        "code": "8B",
+        "type": "Tom Idêntico"
+      },
+      {
+        "code": "8A",
+        "type": "Relativo Maior/Menor"
+      },
+      {
+        "code": "9B",
+        "type": "Subir Energia (+1)"
+      },
+      {
+        "code": "7B",
+        "type": "Descer Energia (-1)"
+      }
+    ],
+    "scale": {
+      "pt": "Dó - Ré - Mi - Fá - Sol - Lá - Si",
+      "en": "C - D - E - F - G - A - B",
+      "notes_list": [
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "A",
+        "B"
+      ]
+    },
+    "bpm": 65,
+    "bpm_exact": 65,
+    "tempo_name": "Largo (Muito Lento)",
+    "ms_per_beat": 923,
+    "time_signature": "4/4",
+    "duration_sec": 199,
+    "duration_formatted": "03:19",
+    "service": "Deezer"
+  },
+  "dom dolla danger danger": {
+    "title": "DANGER DANGER",
+    "artist": "Dom Dolla",
+    "album": "DANGER DANGER",
+    "cover": "https://cdn-images.dzcdn.net/images/cover/0e432570ec3593c4a74cc10e85a79a57/500x500-000000-80-0-0.jpg",
+    "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/6/9/0/0/690829c5db014f133b3360313265dd72.mp3?hdnea=exp=1794029627~acl=/api/1/1/6/9/0/0/690829c5db014f133b3360313265dd72.mp3*~data=user_id=0,application_id=42~hmac=2c04c05980ba5489d1b3eb1cdf17ba4b636dad5ef8a67ee001f9f1e9799b91bb",
+    "key_pt": "Lá Menor",
+    "key_en": "A Minor",
+    "camelot": "8A",
+    "harmonic_matches": [
+      {
+        "code": "8A",
+        "type": "Tom Idêntico"
+      },
+      {
+        "code": "8B",
+        "type": "Relativo Maior/Menor"
+      },
+      {
+        "code": "9A",
+        "type": "Subir Energia (+1)"
+      },
+      {
+        "code": "7A",
+        "type": "Descer Energia (-1)"
+      }
+    ],
+    "scale": {
+      "pt": "Lá - Si - Dó - Ré - Mi - Fá - Sol",
+      "en": "A - B - C - D - E - F - G",
+      "notes_list": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ]
+    },
+    "bpm": 65,
+    "bpm_exact": 65,
+    "tempo_name": "Largo (Muito Lento)",
+    "ms_per_beat": 923,
+    "time_signature": "4/4",
+    "duration_sec": 180,
+    "duration_formatted": "03:00",
+    "service": "Deezer"
+  },
+  "red hot chili peppers dosed": {
+    "title": "Dosed",
+    "artist": "Red Hot Chili Peppers",
+    "album": "By the Way (Deluxe Edition)",
+    "cover": "https://cdn-images.dzcdn.net/images/cover/49b073f55550d41055e02c493f9a7d39/500x500-000000-80-0-0.jpg",
+    "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/0/d/b/0/0dbb03ddf42674890a6c9d1a7cf0de1a.mp3?hdnea=exp=1794029632~acl=/api/1/1/0/d/b/0/0dbb03ddf42674890a6c9d1a7cf0de1a.mp3*~data=user_id=0,application_id=42~hmac=3920c9301f4409554ec35a914cfc2e43fea99d37ef4c6276486364082114ab2a",
+    "key_pt": "Sol Maior",
+    "key_en": "G Major",
+    "camelot": "9B",
+    "harmonic_matches": [
+      {
+        "code": "9B",
+        "type": "Tom Idêntico"
+      },
+      {
+        "code": "9A",
+        "type": "Relativo Maior/Menor"
+      },
+      {
+        "code": "10B",
+        "type": "Subir Energia (+1)"
+      },
+      {
+        "code": "8B",
+        "type": "Descer Energia (-1)"
+      }
+    ],
+    "scale": {
+      "pt": "Sol - Lá - Si - Dó - Ré - Mi - Fá#",
+      "en": "G - A - B - C - D - E - F#",
+      "notes_list": [
+        "G",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F#"
+      ]
+    },
+    "bpm": 104,
+    "bpm_exact": 104.1,
+    "tempo_name": "Andante (Passo Moderado)",
+    "ms_per_beat": 577,
+    "time_signature": "4/4",
+    "duration_sec": 311,
+    "duration_formatted": "05:11",
+    "service": "Deezer"
+  }
+}

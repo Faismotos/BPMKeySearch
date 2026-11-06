@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BPMKeySearch - Detector de Tom, BPM & Tempo (Spotify & YouTube)</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Top Navigation Header -->
+    <header class="header">
+      <div class="logo-area">
+        <img src="logo.png" alt="BPMKeySearch Logo" class="logo-img" />
+        <div>
+          <h1 class="logo-title">BPMKeySearch</h1>
+          <span class="logo-subtitle">Detector Musical em Tempo Real</span>
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="manualSearchInput" placeholder="Buscar qualquer música ou artista..." />
+        <button id="btnSearch" class="btn-search">Buscar</button>
+      </div>
+
+      <!-- Live Monitoring Status Badge & Controls -->
+      <div class="header-actions">
+        <div class="monitor-badge" id="monitorStatus">
+          <span class="pulse-dot"></span>
+          <span id="monitorStatusText">Ouvindo Spotify & YouTube</span>
+        </div>
+        <button id="btnToggleAuto" class="btn-icon" title="Pausar/Retomar detecção automática">
+          <svg id="iconAutoPause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="6" y="4" width="4" height="16"></rect>
+            <rect x="14" y="4" width="4" height="16"></rect>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="main-content">
+      <!-- Hero Now Playing Card -->
+      <section class="card now-playing-card">
+        <div class="cover-wrapper">
+          <div class="vinyl-disc" id="vinylDisc"></div>
+          <img id="albumCover" class="album-cover" src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&auto=format&fit=crop&q=80" alt="Capa do Álbum" />
+          <div class="source-tag" id="sourceTag">
+            <span class="source-icon" id="sourceIcon"></span>
+            <span id="sourceLabel">Aguardando áudio</span>
+          </div>
+        </div>
+
+        <div class="track-details">
+          <div class="playback-state-badge" id="playbackState">
+            <span class="state-dot"></span>
+            <span id="playbackStateText">Pronto para detectar</span>
+          </div>
+
+          <h2 class="track-title" id="trackTitle">Nenhuma música tocando</h2>
+          <p class="track-artist" id="trackArtist">Abra o Spotify ou o YouTube no navegador e dê play!</p>
+          <p class="track-album" id="trackAlbum"></p>
+
+          <!-- Live Progress Bar -->
+          <div class="progress-section">
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" id="progressBar"></div>
+            </div>
+            <div class="time-labels">
+              <span id="currentTime">00:00</span>
+              <span id="totalTime">00:00</span>
+            </div>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div class="action-buttons">
+            <button id="btnPlayPreview" class="btn-action" disabled>
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <span>Ouvir Prévia</span>
+            </button>
+            <button id="btnCopyData" class="btn-action secondary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copiar Dados</span>
+            </button>
+            <button id="btnRefresh" class="btn-action secondary" title="Forçar atualização">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="23 4 23 10 17 10"></polyline>
+                <polyline points="1 20 1 14 7 14"></polyline>
+                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+              </svg>
+              <span>Atualizar</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Music Theory & Core Metrics Grid -->
+      <section class="metrics-grid">
+        <!-- Card 1: TOM (Musical Key) -->
+        <div class="card metric-card key-card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <span class="card-badge">TOM MUSICAL</span>
+              <h3 class="card-title">Tonalidade & Escala</h3>
+            </div>
+            <div class="camelot-badge" id="camelotBadge" title="Código Camelot Wheel para DJ Harmonic Mixing">--</div>
+          </div>
+
+          <div class="key-display">
+            <div class="hero-key" id="keyPt">--</div>
+            <div class="sub-key" id="keyEn">Aguardando detecção</div>
+          </div>
+
+          <div class="scale-section">
+            <span class="scale-label">NOTAS DA ESCALA:</span>
+            <div class="scale-notes" id="scaleNotes">
+              <span class="note-pill">-</span>
+            </div>
+          </div>
+
+          <div class="harmonic-section">
+            <span class="scale-label">MIX HARMÔNICO (CAMELOT):</span>
+            <div class="harmonic-list" id="harmonicList">
+              <span class="harmonic-tag">-</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: BPM (Beats Per Minute) -->
+        <div class="card metric-card bpm-card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <span class="card-badge">VELOCIDADE</span>
+              <h3 class="card-title">BPM & Pulso</h3>
+            </div>
+            <div class="metronome-visualizer" id="metronomePulse" title="Pulso rítmico em tempo real">
+              <div class="pulse-ring"></div>
+              <div class="pulse-core"></div>
+            </div>
+          </div>
+
+          <div class="bpm-display">
+            <span class="hero-bpm" id="heroBpm">--</span>
+            <span class="bpm-unit">BPM</span>
+          </div>
+
+          <div class="tempo-classification" id="tempoClassification">
+            Andamento Moderado
+          </div>
+
+          <div class="bpm-extras">
+            <div class="extra-stat">
+              <span class="stat-name">Milissegundos/Beat</span>
+              <span class="stat-value" id="msPerBeat">-- ms</span>
+            </div>
+            <div class="extra-stat">
+              <span class="stat-name">Precisão</span>
+              <span class="stat-value" id="bpmExact">--</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: TEMPO & COMPASSO -->
+        <div class="card metric-card time-card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <span class="card-badge">MÉTRICA</span>
+              <h3 class="card-title">Tempo & Compasso</h3>
+            </div>
+            <div class="time-sig-badge" id="timeSignature">4/4</div>
+          </div>
+
+          <div class="time-metrics-list">
+            <div class="metric-row">
+              <span class="row-label">Compasso Musical</span>
+              <span class="row-value highlight" id="timeSignatureDesc">4/4 (Quaternário)</span>
+            </div>
+            <div class="metric-row">
+              <span class="row-label">Duração Total</span>
+              <span class="row-value" id="totalDurationMetric">--:--</span>
+            </div>
+            <div class="metric-row">
+              <span class="row-label">Origem da Detecção</span>
+              <span class="row-value" id="serviceMetric">Windows GSMTC</span>
+            </div>
+            <div class="metric-row">
+              <span class="row-label">Modo do Tom</span>
+              <span class="row-value" id="keyModeMetric">--</span>
+            </div>
+          </div>
+
+          <div class="time-tip">
+            💡 <strong>Dica de Produção:</strong> Use o valor de <code><span id="delayTip">500</span>ms</code> para ajustar Delays sincronizados em 1/4 na sua DAW!
+          </div>
+        </div>
+      </section>
+
+      <!-- Lower Utilities: Tap Tempo & Session History -->
+      <section class="utilities-grid">
+        <!-- Tap Tempo Card -->
+        <div class="card util-card tap-tempo-card">
+          <div class="util-header">
+            <div>
+              <h3 class="util-title">Tap Tempo Manual</h3>
+              <p class="util-subtitle">Clique no ritmo ou aperte a tecla Espaço</p>
+            </div>
+            <button id="btnResetTap" class="btn-text">Zerar</button>
+          </div>
+
+          <div class="tap-area" id="tapArea">
+            <div class="tap-prompt">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M2 12h20"></path>
+              </svg>
+              <span>CLIQUE NO RITMO</span>
+            </div>
+            <div class="tap-bpm-readout">
+              <span id="tapBpmVal">--</span>
+              <span class="tap-bpm-sub">BPM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- History Card -->
+        <div class="card util-card history-card">
+          <div class="util-header">
+            <div>
+              <h3 class="util-title">Histórico da Sessão</h3>
+              <p class="util-subtitle">Músicas ouvidas recentemente</p>
+            </div>
+            <span class="history-count" id="historyCount">0 músicas</span>
+          </div>
+
+          <div class="history-list" id="historyList">
+            <div class="history-empty">Nenhuma música registrada nesta sessão ainda.</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Audio Preview Player Element (Hidden) -->
+    <audio id="audioPreview"></audio>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Mensagem</div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
